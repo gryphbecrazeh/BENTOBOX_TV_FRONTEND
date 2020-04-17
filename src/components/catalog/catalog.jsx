@@ -18,13 +18,13 @@ class Catalog extends Component {
 	}
 	render() {
 		return (
-			<div class="catalog-container">
+			<div className="catalog-container">
 				<strong>Episodes</strong>
 				<div className="catalog">
 					{this.state.episodes.map((episode) => {
 						return (
-							<div key={`${episode._ID}`} className="episode">
-								<Link to="/episode">
+							<div key={`${episode._id}`} className="episode">
+								<Link to={`/episode/${episode._id}`}>
 									<img src={`${episode.image}`} />
 								</Link>
 								<Link to="/episode">
