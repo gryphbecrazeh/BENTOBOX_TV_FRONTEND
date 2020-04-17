@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 class Catalog extends Component {
 	state = {
@@ -23,8 +24,12 @@ class Catalog extends Component {
 					{this.state.episodes.map((episode) => {
 						return (
 							<div key={`${episode._ID}`} className="episode">
-								<img src={`${episode.image}`} />
-								<div className="name">{`${episode.name} ${episode.episode}`}</div>
+								<Link to="/episode">
+									<img src={`${episode.image}`} />
+								</Link>
+								<Link to="/episode">
+									<div className="name">{`${episode.name} ${episode.episode}`}</div>
+								</Link>
 							</div>
 						);
 					})}

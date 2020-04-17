@@ -1,9 +1,14 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 let NavBar = () => {
 	return (
 		<nav>
-			<div className="navbar-link">Navigation</div>
+			<Link to="/">
+				<div className="navbar-link">Home</div>
+			</Link>
+			<Link to="/catalog">
+				<div className="navbar-link">Catalog</div>
+			</Link>
 		</nav>
 	);
 };
