@@ -8,14 +8,29 @@ let Episode = (props) => {
 	useEffect(() => {
 		if (!loaded) {
 			axios.get(`/api/episode/?episode=${episodeID}`).then((res) => {
+				console.log(res.data);
 				setEpisode(res.data);
 				setLoaded(true);
 			});
 		}
 	});
+	console.log(loaded, video);
 	return (
-		<div>
-			<iframe src={`${video.url}`}></iframe>
+		<div className="episode-container">
+			<div className="column-left"></div>
+			{(() => {
+				if (video.video != null) {
+					return (
+						<video width="100%" height="auto" controls autoPlay>
+							{console.log(video.video)}
+							<source src={`${video.video}`}></source>
+						</video>
+					);
+				} else {
+					return <div>Loading...</div>;
+				}
+			})()}
+			<div className="column-right"></div>
 		</div>
 	);
 };

@@ -56,3 +56,7 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+.episode-container {
+	display: grid;
+	grid-template-columns: 1fr 6fr 1fr;
+}
