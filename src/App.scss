@@ -1,23 +1,37 @@
-$blue: #1d3f75;
-$dark-blue: #0b2040;
+$pink: #f45b69;
+$white: #f6e8ea;
+$dark-grey: #22181c;
+$dark-red: #5a0001;
+$bright-red: #fd151b;
+
 body {
-	background-color: $dark-blue;
-}
-header {
-	height: 10vh;
-	max-height: 10vh;
-	nav {
+	background-color: #111 !important;
+	.catalog-container::after {
+		background-color: white;
+		position: absolute;
 		height: 100%;
-		width: 100%;
-		background-color: $blue;
-		color: white;
-		display: flex;
-		justify-content: space-evenly;
-		align-items: center;
-		padding: 0 1em;
-		text-transform: uppercase;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 999;
 	}
 }
+// header {
+// 	height: 10vh;
+// 	max-height: 10vh;
+// 	nav {
+// 		height: 100%;
+// 		width: 100%;
+// 		background-color: $blue;
+// 		color: white;
+// 		display: flex;
+// 		justify-content: space-evenly;
+// 		align-items: center;
+// 		padding: 0 1em;
+// 		text-transform: uppercase;
+// 	}
+// }
 
 .catalog-container {
 	padding: 1em;
@@ -32,10 +46,17 @@ header {
 	.catalog {
 		display: grid;
 		grid-gap: 1em;
-		grid-template-columns: repeat(3, 1fr);
-		@media screen and (min-width: 1000px) {
+		grid-template-columns: 1fr;
+		@media screen and (min-width: 600px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media screen and (min-width: 800px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@media screen and (min-width: 1200px) {
 			grid-template-columns: repeat(5, 1fr);
 		}
+
 		.episode {
 			background-color: white;
 			border-radius: 5px;

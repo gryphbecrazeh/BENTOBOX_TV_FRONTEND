@@ -17,7 +17,7 @@ function App() {
 						<Catalog />
 					</Route>
 					<Route
-						path="/episode/:episodeID"
+						path="/episode/:episodeID/:nextEpisodeID"
 						render={(props) => <Episode {...props} />}
 					/>
 				</Switch>
