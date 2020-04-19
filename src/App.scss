@@ -16,6 +16,11 @@ body {
 		bottom: 0;
 		z-index: 999;
 	}
+	.column-left,
+	.column-right,
+	.column-center {
+		padding: 1em;
+	}
 }
 // header {
 // 	height: 10vh;
@@ -36,12 +41,22 @@ body {
 .catalog-container {
 	padding: 1em;
 	text-align: center;
-	strong {
-		color: white;
-		text-transform: uppercase;
-		font-size: 2em;
-		display: block;
-		padding-bottom: 0.5em;
+	.catalog-interaction-menu {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		strong {
+			color: white;
+			text-transform: uppercase;
+			font-size: 2em;
+			display: block;
+			padding-bottom: 0.5em;
+		}
+		.catalog-interaction {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 	}
 	.catalog {
 		display: grid;
