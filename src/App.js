@@ -17,10 +17,12 @@ function App() {
 						<Catalog />
 					</Route>
 					<Route
+						exact
 						path="/e/:episodeID"
 						render={(props) => <Episode {...props} />}
 					/>
 					<Route
+						exact
 						path="/e/:episodeID/:nextEpisodeID"
 						render={(props) => <Episode {...props} />}
 					/>

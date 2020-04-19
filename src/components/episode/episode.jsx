@@ -23,7 +23,6 @@ let Episode = () => {
 			});
 		}
 	});
-	console.log(nextEpisodeID);
 	return (
 		<div className="episode-container">
 			<div className="column-left"></div>
@@ -39,7 +38,17 @@ let Episode = () => {
 						{(() => {
 							if (video.video != null) {
 								return (
-									<video width="100%" height="auto" controls autoPlay>
+									<video
+										width="100%"
+										height="auto"
+										controls
+										autoPlay
+										onEnded={() => {
+											if (nextEpisodeID) {
+												window.location = `/e/${nextEpisodeID}`;
+											}
+										}}
+									>
 										<source src={`${video.video}`}></source>
 									</video>
 								);

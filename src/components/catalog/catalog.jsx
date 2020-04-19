@@ -61,7 +61,9 @@ class Catalog extends Component {
 								<CardImg top width="100%" src={episode.image} />
 							</Link>
 							<CardBody>
-								<Button>Watch</Button>
+								<Button tag={Link} to={`/e/${episode._id}/${nextEpisodeId}`}>
+									Watch Now!
+								</Button>
 							</CardBody>
 						</Card>
 					);
