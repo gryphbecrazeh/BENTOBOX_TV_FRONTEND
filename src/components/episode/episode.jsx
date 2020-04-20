@@ -37,6 +37,7 @@ let Episode = () => {
 					<CardBody>
 						{(() => {
 							if (video.video != null) {
+								console.log(video.video);
 								return (
 									<video
 										width="100%"
